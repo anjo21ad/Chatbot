@@ -2,18 +2,21 @@ import React from 'react';
 import { Box, Typography, Button, Card, CardContent, CardActions, Grid, ThemeProvider, createTheme } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet'; // Icon for salary details
-import MonetizationOnIcon from '@mui/icons-material/MonetizationOn'; // Icon for bonuses
-import AssessmentIcon from '@mui/icons-material/Assessment'; // Icon for salary review
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
+import AssessmentIcon from '@mui/icons-material/Assessment';
+import BeachAccessIcon from '@mui/icons-material/BeachAccess';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import ElderlyIcon from '@mui/icons-material/Elderly';
 
 const customTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#00e676', // Green color for primary
+      main: '#00e677', 
     },
     secondary: {
-      main: '#76ff03', // Lighter green color for secondary
+      main: '#00FF00', // lime green
       contrastText: '#ffffff',
     },
     background: {
@@ -39,7 +42,7 @@ const customTheme = createTheme({
       styleOverrides: {
         root: {
           backdropFilter: 'blur(10px)',
-          boxShadow: '0px 8px 25px rgba(0, 230, 118, 0.5)', // Green shadow
+          boxShadow: '0px 8px 25px rgba(0, 230, 118, 0.5)',
           transition: 'transform 0.2s ease-in-out',
           '&:hover': {
             transform: 'scale(1.02)',
@@ -55,8 +58,11 @@ const Home = () => {
 
   const salaryActions = [
     { title: 'Overenskomst for lærere', icon: <AccountBalanceWalletIcon />, path: '/overenskomst-for-lærere' },
-    { title: 'Bonusordninger', icon: <MonetizationOnIcon />, path: '/bonuses' },
-    { title: 'Lønreview', icon: <AssessmentIcon />, path: '/salary-review' },
+    { title: 'Refusion', icon: <MonetizationOnIcon />, path: '/refusion' },
+    { title: 'Lønreview', icon: <AssessmentIcon />, path: '/løn-review' },
+    { title: 'Pension', icon: <ElderlyIcon />, path: '/pension' }, 
+    { title: 'Arbejdstid', icon: <AccessTimeIcon />, path: '/arbejdstid' },
+    { title: 'Feriepenge', icon: <BeachAccessIcon />, path: '/feriepenge' },
   ];
 
   return (
@@ -69,18 +75,18 @@ const Home = () => {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: '#121212', // Dark grey background color
+          backgroundColor: '#121212',
         }}
       >
         <Typography
           variant="h3"
           gutterBottom
           sx={{
-            color: '#ffffff', // White text color
+            color: '#ffffff',
             textAlign: 'center',
             fontWeight: 'bold',
             mb: 3,
-            textShadow: '0 0 8px #00e676', // Neon green text shadow for the glow effect
+            textShadow: '0 0 8px #00e676',
           }}
         >
           Payroll Bot

@@ -10,7 +10,7 @@ const customTheme = createTheme({
       main: '#00e676',
     },
     secondary: {
-      main: '#76ff03',
+      main: '#00FF00',
       contrastText: '#ffffff',
     },
     background: {
