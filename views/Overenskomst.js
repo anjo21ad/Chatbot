@@ -11,7 +11,6 @@ const customTheme = createTheme({
     },
     secondary: {
       main: '#00FF00',
-      contrastText: '#ffffff',
     },
     background: {
       default: '#121212',
