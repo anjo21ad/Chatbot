@@ -68,7 +68,7 @@ const Home = () => {
     <ThemeProvider theme={customTheme}>
       <Box
         sx={{
-          height: '100vh',
+          height: '90vh',
           padding: 4,
           display: 'flex',
           flexDirection: 'column',

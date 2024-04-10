@@ -50,7 +50,7 @@ function Header() {
           },
         }}>
           <img src={testLogo} alt="Logo" style={{ 
-            height: matches ? '60px' : '50px', 
+            height: matches ? '130px' : '130px', 
             marginRight: '15px',
           }} />
         </Box>
