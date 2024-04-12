@@ -53,7 +53,15 @@ const Home = () => {
         <Grid container spacing={4} justifyContent="center">
           {salaryActions.map((action, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.div 
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: '0 0 15px 3px rgba(255, 255, 255, 0.7)' // Adds white glow effect on hover
+                }} 
+                whileTap={{ 
+                  scale: 0.95 
+                }}
+              >
                 <Card>
                   <CardContent>
                     <Typography variant="h5" component="div" sx={{ mb: 1.5, display: 'flex', alignItems: 'center', gap: 1 }}>

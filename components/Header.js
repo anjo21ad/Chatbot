@@ -33,7 +33,7 @@ function Header() {
           display: 'flex', // Ensures the logo and possibly other elements are laid out in a row
           alignItems: 'center', // Vertically centers the content within the box
           '&:hover img': { // Adds hover effects specifically to the image within this box
-            boxShadow: '0 0 15px 3px rgba(0, 255, 0, 0.7)', // Glow effect on hover
+            boxShadow: '0 0 15px 3px rgba(255, 255, 255, 0.7)', // Glow effect on hover
             transition: 'box-shadow 0.3s ease-in-out', // Smooth transition for the shadow effect
           },
         }}>
