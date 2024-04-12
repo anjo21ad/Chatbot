@@ -1,5 +1,6 @@
+// Home.js
 import React from 'react';
-import { Box, Typography, Button, Card, CardContent, CardActions, Grid, ThemeProvider, createTheme } from '@mui/material';
+import { Box, Typography, Button, Card, CardContent, CardActions, Grid, ThemeProvider } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
@@ -7,50 +8,8 @@ import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import ElderlyIcon from '@mui/icons-material/Elderly';
-
-const customTheme = createTheme({
-  palette: {
-    mode: 'dark',
-    primary: {
-      main: '#00e677', 
-    },
-    secondary: {
-      main: '#00FF00', // lime green
-    },
-    background: {
-      default: '#121212',
-      paper: '#1e1e1e',
-    },
-  },
-  components: {
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          fontSize: '1.2rem',
-          fontWeight: 'bold',
-          letterSpacing: '0.05rem',
-          transition: 'transform 0.2s ease-in-out',
-          '&:hover': {
-            transform: 'scale(1.05)',
-          },
-        },
-      },
-    },
-    MuiCard: {
-      styleOverrides: {
-        root: {
-          backdropFilter: 'blur(10px)',
-          boxShadow: '0px 8px 25px rgba(0, 230, 118, 0.5)',
-          transition: 'transform 0.2s ease-in-out',
-          '&:hover': {
-            transform: 'scale(1.02)',
-          },
-        },
-      },
-    },
-  },
-});
+import KeyIcon from '@mui/icons-material/Key';
+import customTheme from '../config/theme';  // Assuming this is the correct path to your theme configuration
 
 const Home = () => {
   const navigate = useNavigate();
@@ -59,7 +18,7 @@ const Home = () => {
     { title: 'Overenskomst for lærere', icon: <AccountBalanceWalletIcon />, path: '/overenskomst-for-lærere' },
     { title: 'Refusion', icon: <MonetizationOnIcon />, path: '/refusion' },
     { title: 'Lønreview', icon: <AssessmentIcon />, path: '/løn-review' },
-    { title: 'Pension', icon: <ElderlyIcon />, path: '/pension' }, 
+    { title: 'Transaktionskoder', icon: <KeyIcon />, path: '/transaktionskoder' },
     { title: 'Arbejdstid', icon: <AccessTimeIcon />, path: '/arbejdstid' },
     { title: 'Feriepenge', icon: <BeachAccessIcon />, path: '/feriepenge' },
   ];
@@ -78,13 +37,13 @@ const Home = () => {
         }}
       >
         <Typography
-          variant="h3"
+          variant="h2"
           gutterBottom
           sx={{
             color: '#ffffff',
             textAlign: 'center',
             fontWeight: 'bold',
-            mb: 3,
+            mb: 5,
             textShadow: '0 0 8px #00e676',
           }}
         >
